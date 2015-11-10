@@ -1,0 +1,10 @@
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\VIEWMODEL\bin\Debug\VIEWMODEL.dll
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\VIEWMODEL\bin\Debug\VIEWMODEL.pdb
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\VIEWMODEL\obj\Debug\VIEWMODEL.dll
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\VIEWMODEL\obj\Debug\VIEWMODEL.pdb
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\VIEWMODEL\obj\Debug\VIEWMODEL.csprojResolveAssemblyReference.cache
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\VIEWMODEL\bin\Debug\VIEWMODEL.dll.config
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\VIEWMODEL\bin\Debug\EntityFramework.dll
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\VIEWMODEL\bin\Debug\EntityFramework.xml
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\VIEWMODEL\bin\Debug\DTO.dll
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\VIEWMODEL\bin\Debug\DTO.pdb

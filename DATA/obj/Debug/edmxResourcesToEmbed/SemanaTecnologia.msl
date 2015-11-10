@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SemanaTecnologiaModelStoreContainer" CdmEntityContainer="SemanaTecnologiaEntities">
+    <EntitySetMapping Name="Insc_Evento">
+      <EntityTypeMapping TypeName="SemanaTecnologiaModel.Insc_Evento">
+        <MappingFragment StoreEntitySet="Insc_Evento">
+          <ScalarProperty Name="PK_INSC_EVENTO" ColumnName="PK_INSC_EVENTO" />
+          <ScalarProperty Name="FK_EVENTO" ColumnName="FK_EVENTO" />
+          <ScalarProperty Name="FK_INSCRICAO" ColumnName="FK_INSCRICAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inscricao">
+      <EntityTypeMapping TypeName="SemanaTecnologiaModel.Inscricao">
+        <MappingFragment StoreEntitySet="Inscricao">
+          <ScalarProperty Name="PK_INSCRICAO" ColumnName="PK_INSCRICAO" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Palestrante">
+      <EntityTypeMapping TypeName="SemanaTecnologiaModel.Palestrante">
+        <MappingFragment StoreEntitySet="Palestrante">
+          <ScalarProperty Name="PK_PALESTRANTE" ColumnName="PK_PALESTRANTE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="TITRATION" ColumnName="TITRATION" />
+          <ScalarProperty Name="CV" ColumnName="CV" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="TEL" ColumnName="TEL" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Evento">
+      <EntityTypeMapping TypeName="SemanaTecnologiaModel.Evento">
+        <MappingFragment StoreEntitySet="Evento">
+          <ScalarProperty Name="HOUR" ColumnName="HOUR" />
+          <ScalarProperty Name="END_TIME" ColumnName="END_TIME" />
+          <ScalarProperty Name="NSLOTS" ColumnName="NSLOTS" />
+          <ScalarProperty Name="FK_PALESTRANTE" ColumnName="FK_PALESTRANTE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
+          <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="LOCATION" ColumnName="LOCATION" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="PK_EVENT" ColumnName="PK_EVENT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Participante">
+      <EntityTypeMapping TypeName="SemanaTecnologiaModel.Participante">
+        <MappingFragment StoreEntitySet="Participante">
+          <ScalarProperty Name="PROFILE" ColumnName="PROFILE" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="TEL" ColumnName="TEL" />
+          <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+          <ScalarProperty Name="COURSE" ColumnName="COURSE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="PK_PARTICIPANTE" ColumnName="PK_PARTICIPANTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

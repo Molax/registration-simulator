@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SemanaTecnologiaModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SemanaTecnologiaEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Insc_Evento" EntityType="SemanaTecnologiaModel.Insc_Evento" />
+    <EntitySet Name="Inscricao" EntityType="SemanaTecnologiaModel.Inscricao" />
+    <EntitySet Name="Palestrante" EntityType="SemanaTecnologiaModel.Palestrante" />
+    <EntitySet Name="Evento" EntityType="SemanaTecnologiaModel.Evento" />
+    <EntitySet Name="Participante" EntityType="SemanaTecnologiaModel.Participante" />
+    <AssociationSet Name="FK_Evento_Palestrante" Association="SemanaTecnologiaModel.FK_Evento_Palestrante">
+      <End Role="Palestrante" EntitySet="Palestrante" />
+      <End Role="Evento" EntitySet="Evento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Insc_Evento_Evento" Association="SemanaTecnologiaModel.FK_Insc_Evento_Evento">
+      <End Role="Evento" EntitySet="Evento" />
+      <End Role="Insc_Evento" EntitySet="Insc_Evento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Insc_Evento_Inscricao" Association="SemanaTecnologiaModel.FK_Insc_Evento_Inscricao">
+      <End Role="Inscricao" EntitySet="Inscricao" />
+      <End Role="Insc_Evento" EntitySet="Insc_Evento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inscricao_Participante" Association="SemanaTecnologiaModel.FK_Inscricao_Participante">
+      <End Role="Participante" EntitySet="Participante" />
+      <End Role="Inscricao" EntitySet="Inscricao" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Insc_Evento">
+    <Key>
+      <PropertyRef Name="PK_INSC_EVENTO" />
+    </Key>
+    <Property Name="PK_INSC_EVENTO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FK_EVENTO" Type="Int32" Nullable="false" />
+    <Property Name="FK_INSCRICAO" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Evento" Relationship="SemanaTecnologiaModel.FK_Insc_Evento_Evento" FromRole="Insc_Evento" ToRole="Evento" />
+    <NavigationProperty Name="Inscricao" Relationship="SemanaTecnologiaModel.FK_Insc_Evento_Inscricao" FromRole="Insc_Evento" ToRole="Inscricao" />
+  </EntityType>
+  <EntityType Name="Inscricao">
+    <Key>
+      <PropertyRef Name="PK_INSCRICAO" />
+    </Key>
+    <Property Name="PK_INSCRICAO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CPF" Type="String" Nullable="false" MaxLength="14" Unicode="true" FixedLength="false" />
+    <Property Name="DATE" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Insc_Evento" Relationship="SemanaTecnologiaModel.FK_Insc_Evento_Inscricao" FromRole="Inscricao" ToRole="Insc_Evento" />
+    <NavigationProperty Name="Participante" Relationship="SemanaTecnologiaModel.FK_Inscricao_Participante" FromRole="Inscricao" ToRole="Participante" />
+  </EntityType>
+  <EntityType Name="Palestrante">
+    <Key>
+      <PropertyRef Name="PK_PALESTRANTE" />
+    </Key>
+    <Property Name="PK_PALESTRANTE" Type="Int32" Nullable="false" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TITRATION" Type="String" Nullable="false" MaxLength="225" Unicode="true" FixedLength="false" />
+    <Property Name="CV" Type="String" Nullable="false" MaxLength="225" Unicode="true" FixedLength="false" />
+    <Property Name="CITY" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="TEL" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Evento" Relationship="SemanaTecnologiaModel.FK_Evento_Palestrante" FromRole="Palestrante" ToRole="Evento" />
+  </EntityType>
+  <EntityType Name="Evento">
+    <Key>
+      <PropertyRef Name="PK_EVENT" />
+    </Key>
+    <Property Type="Int32" Name="PK_EVENT" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="NAME" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LOCATION" Nullable="false" MaxLength="225" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DATE" Nullable="false" Precision="0" />
+    <Property Type="String" Name="TYPE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="START_TIME" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DESCRIPTION" MaxLength="225" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="FK_PALESTRANTE" Nullable="false" />
+    <Property Type="Int32" Name="NSLOTS" Nullable="false" />
+    <Property Type="String" Name="END_TIME" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="HOUR" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Palestrante" Relationship="SemanaTecnologiaModel.FK_Evento_Palestrante" FromRole="Evento" ToRole="Palestrante" />
+    <NavigationProperty Name="Insc_Evento" Relationship="SemanaTecnologiaModel.FK_Insc_Evento_Evento" FromRole="Evento" ToRole="Insc_Evento" />
+  </EntityType>
+  <EntityType Name="Participante">
+    <Key>
+      <PropertyRef Name="PK_PARTICIPANTE" />
+    </Key>
+    <Property Type="String" Name="PK_PARTICIPANTE" Nullable="false" MaxLength="14" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NAME" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="COURSE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PERIOD" Nullable="false" />
+    <Property Type="String" Name="TEL" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMAIL" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LOGIN" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PASSWORD" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PROFILE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Inscricao" Relationship="SemanaTecnologiaModel.FK_Inscricao_Participante" FromRole="Participante" ToRole="Inscricao" />
+  </EntityType>
+  <Association Name="FK_Evento_Palestrante">
+    <End Type="SemanaTecnologiaModel.Palestrante" Role="Palestrante" Multiplicity="1" />
+    <End Type="SemanaTecnologiaModel.Evento" Role="Evento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Palestrante">
+        <PropertyRef Name="PK_PALESTRANTE" />
+      </Principal>
+      <Dependent Role="Evento">
+        <PropertyRef Name="FK_PALESTRANTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Insc_Evento_Evento">
+    <End Type="SemanaTecnologiaModel.Evento" Role="Evento" Multiplicity="1" />
+    <End Type="SemanaTecnologiaModel.Insc_Evento" Role="Insc_Evento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Evento">
+        <PropertyRef Name="PK_EVENT" />
+      </Principal>
+      <Dependent Role="Insc_Evento">
+        <PropertyRef Name="FK_EVENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Insc_Evento_Inscricao">
+    <End Type="SemanaTecnologiaModel.Inscricao" Role="Inscricao" Multiplicity="1" />
+    <End Type="SemanaTecnologiaModel.Insc_Evento" Role="Insc_Evento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inscricao">
+        <PropertyRef Name="PK_INSCRICAO" />
+      </Principal>
+      <Dependent Role="Insc_Evento">
+        <PropertyRef Name="FK_INSCRICAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inscricao_Participante">
+    <End Type="SemanaTecnologiaModel.Participante" Role="Participante" Multiplicity="1" />
+    <End Type="SemanaTecnologiaModel.Inscricao" Role="Inscricao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Participante">
+        <PropertyRef Name="PK_PARTICIPANTE" />
+      </Principal>
+      <Dependent Role="Inscricao">
+        <PropertyRef Name="CPF" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

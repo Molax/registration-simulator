@@ -1,0 +1,16 @@
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\BLL\bin\Debug\BLL.dll.config
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\BLL\bin\Debug\BLL.dll
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\BLL\bin\Debug\BLL.pdb
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\BLL\bin\Debug\DAL.dll
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\BLL\bin\Debug\DTO.dll
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\BLL\bin\Debug\EntityFramework.dll
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\BLL\bin\Debug\VIEWMODEL.dll
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\BLL\bin\Debug\DATA.dll
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\BLL\bin\Debug\DAL.pdb
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\BLL\bin\Debug\DTO.pdb
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\BLL\bin\Debug\VIEWMODEL.pdb
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\BLL\bin\Debug\EntityFramework.xml
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\BLL\bin\Debug\DATA.pdb
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\BLL\obj\Debug\BLL.dll
+C:\Users\Joaop\Documents\Visual Studio 2012\Projects\SemanaTecnologia\BLL\obj\Debug\BLL.pdb
